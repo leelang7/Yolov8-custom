@@ -6,6 +6,7 @@ DATASET_LABEL_ROOT = f"E:\AI_Project\AI_Learning\Dataset\VOC2028\Labels\\"  # �
 yolo_file = os.listdir(YOLOV8_LABEL_ROOT)
 
 # .txt로 끝나는 파일 탐색
+cnt = 0
 for file_name in yolo_file:
 
     if not file_name.endswith(".txt"):
@@ -24,3 +25,4 @@ for file_name in yolo_file:
             # 주석파일에 추가
             with open(data_path, "a") as fd:
                 fd.write(line)
+print(f'{cnt} 라인 추가 완료')
