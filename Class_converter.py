@@ -1,11 +1,12 @@
 import os
 
 YOLOV8_LABEL_ROOT = 'C:\\Users\\leesc\\PycharmProjects\\ultralytics\\runs\\detect\\predict2\\labels\\'  # yolov8이 내보낸 추론 이미지의 txt
-DATASET_LABEL_ROOT = 'C:\\Users\\leesc\\PycharmProjects\\ultralytics\\results\\'   # 사람이 없는 데이터셋의 라벨 경로
+DATASET_LABEL_ROOT = 'C:\\Users\\leesc\\PycharmProjects\\ultralytics\\results\\' # 클래스 넘버 바꿔서 저장할 경로
 
 yolo_file = os.listdir(YOLOV8_LABEL_ROOT)
 
 # .txt로 끝나는 파일 탐색
+cnt = 0
 for file_name in yolo_file:
 
     if not file_name.endswith(".txt"):
@@ -25,4 +26,4 @@ for file_name in yolo_file:
                 with open(data_path, "a") as fd:
                     fd.write("\n")
                     fd.write(line)
-                    #line.strip() # 빈 줄 제거
+print(f'{cnt} 라인을 변경했습니다.')                    
