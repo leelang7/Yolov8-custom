@@ -4,7 +4,7 @@ from glob import glob
 train_img_list = glob('C:\\Users\\leesc\\Downloads\\HardHat\\train\\images\\*.jpg')
 train_txt_list = glob('C:\\Users\\leesc\\Downloads\\HardHat\\train\\images\\labels\\*.txt')
 test_img_list = glob('C:\\Users\\leesc\\Downloads\\HardHat\\test\\images\\*.jpg')
-test_txt_list = glob('C:\\Users\\leesc\\Downloads\\HardHat\\test\\images\\*.jpg')
+test_txt_list = glob('C:\\Users\\leesc\\Downloads\\HardHat\\test\\images\\labels\\*.txt')
 
 print(len(train_img_list), len(test_img_list))
 print(len(test_txt_list), len(test_img_list))
