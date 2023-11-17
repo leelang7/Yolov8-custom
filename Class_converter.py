@@ -18,13 +18,13 @@ for file_name in yolo_file:
             # 0 : person 을 다른 class로 일괄 변경
             if line.split()[0] == '0':
                 line = list(line)
-                line[0] = '1'
+                line[0] = '2'
                 line = ''.join(line).strip()
                 print(line)
                 # 주석파일에 추가
                 data_path = DATASET_LABEL_ROOT + file_name
                 with open(data_path, "a") as fd:
                     cnt += 1
-                    fd.write("\n")
                     fd.write(line)
-print(f'{cnt} 라인을 변경했습니다.')                    
+                    fd.write("\n")
+print(f'{cnt} 라인을 변경했습니다.')
